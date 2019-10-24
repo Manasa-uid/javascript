@@ -1,0 +1,9 @@
+.demo
+h1 { 
+color:blue;
+}
+#demo
+h2{
+	color: yellow;
+}
+<h3 style="background-color: blue;"></h3>

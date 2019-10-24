@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forms and event handling</title>
+</head>
+<body>
+	
+   <form name="myForm" action="/action_page.php">
+   	<table>
+   		<tr>
+   			<td>First name:</td>
+   			<td> <input type="text" name="firstname" id = "frstname" value="" oninput="firstnamefunc()" style="text-transform: uppercase;"></td>
+   			<td> <p id = "demo"></p> </td>
+   		</tr>
+   		<tr>
+   			<td>Last name:</td>
+   			<td><input type="text" name="lastname" id = "lastname" value="" oninput="firstnamefunc1()" style="text-transform: uppercase;"></td>
+   			<td><p id="demo1"></p> </td>
+   		</tr>
+   		<tr><td>DOB:</td>
+  <td><input type="text" name="dob" value="" oninput="dob()"></td>
+  </tr><tr><td>
+  Gender:</td>
+  <td>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other  <br>
+  </td></tr>
+  <tr><td>
+  Phone:</td>
+  <td>
+  <input type="number" pattern="[A-Za-z]{10}" name="phone" value="" id="mobnum1" oninput="mob()">
+  <td><p id="demo3"></p></td>
+  </td></tr>
+  <tr>
+  <td>
+  Email:</td>
+  <td>
+  <input type="email" name="email" value="">
+  </td></tr>
+  <tr><td>
+  Nationality:</td>
+  <td>
+  <select>
+  <option value="indian">Indian</option>
+  <option value="nri">NRI</option>
+</select></td></tr>
+<tr><td>
+  Course:</td>
+  <tr><td>
+  <select>
+  <option value="be">BE</option>
+  <option value="mtech">MTech</option>
+    <option value="phd">PHD</option>
+</select></td></tr>
+<tr><td>
+  Address:</td>
+  <td>
+  <textarea rows="4" cols="30">
+  </textarea>
+</td></tr>
+<tr><td>
+  <input type="submit" value="Submit"></td>
+  </tr>
+</form> 
+</table>
+
+<script type="">
+	function firstnamefunc() {
+		var nme=document.getElementById("frstname").value;
+		if(nme.length>=3){
+			document.getElementById("demo").innerHTML=""
+		}
+		else{
+			document.getElementById("demo").innerHTML="invalid"
+		}
+	}
+	function lastnamefunc1() {
+		var nme1=document.getElementById("lastname").value;
+		if(nme1.length>=3){
+			document.getElementById("demo1").innerHTML=""
+		}
+		else{
+			document.getElementById("demo1").innerHTML="invalid"
+		}
+	}
+	function mob() {
+		var mobnum=document.getElementById('mobnum1').value;
+		if(mobnum>10&&mobnum<10&&mobnum==10
+      ){
+	
+			document.getElementById("demo3").innerHTML=""
+		}
+		else{
+			document.getElementById("demo3").innerHTML="invalid"
+		
+		}
+	}
+
+
+		
+	</script>
+</body>
+</html>

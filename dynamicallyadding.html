@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamic</title>
+	<style type="text/css">
+		#demo{
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo">Enter First name
+		<input type=" text" name=" input" value="">
+		Enter last Name
+		<input type="text" name="input">
+		Enter Address
+		<input type="text" name="input">
+		<div id="demo"></div>
+	</div>
+	<button onclick="dynamic()" name="">ADD</button>
+	
+
+	<table id=demo1></table>
+	
+	<script type="text/javascript">
+		function dynamic() {
+			var doo=document.getElementById('demo');
+			var nnn=document.createElement("br")
+
+			var fname=document.createElement("span")
+			fname.textContent="Enter First Name";
+			doo.appendChild(fname);
+			var fname1=document.createElement('input');
+			doo.appendChild(fname1);
+
+			var lname=document.createElement("span")
+			lname.textContent="Enter last Name";
+			doo.appendChild(lname);
+			var lname1=document.createElement("input")
+			doo.appendChild(lname1)
+
+			var address=document.createElement("span")
+			address.textContent="Enter Address";
+			doo.appendChild(address);
+			var address1=document.createElement("input")
+			doo.appendChild(address1)
+			doo.appendChild(nnn)
+		
+         var table = document.getElementById("myTable");
+         var row = table.insertRow(0);
+         var cell1 = row.insertCell(0);
+         var cell2 = row.insertCell(1);
+         cell1.innerHTML = "NEW CELL1";
+         cell2.innerHTML = "NEW CELL2";
+ 
+			
+		}
+
+		
+</script>
+</body>
+</html>

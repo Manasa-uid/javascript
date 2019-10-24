@@ -1,0 +1,45 @@
+<script type="text/javascript">
+	function employee(name,age,mailid,address ){
+		this.name=name;
+		this.age=age;
+		this.mailid=mailid;
+		this.address=address;
+	}
+	var obj1=new employee("kavya",21,"nkavya243@gmail.com","Bangalore");
+	console.log(obj1);
+	console.log("<br/>");
+	var  obj2=new employee("santhosh" ,25,"santhusvp92@gmail.com" ,"bangalore");
+	console.log(obj2);
+	console.log("<br/>");
+	var obj3=new employee("bharthi",24,"bharthijn25@gmail.com","Honnavar");
+	console.log(obj3);
+	console.log("<br/>");
+	var obj4=new employee("manasa",30,"mansinayak10@gmail.com","Bangalore");
+	console.log(obj4);
+	console.log("<br/>");
+	var obj5=new employee("poornima",25," madhujyothipoornima@gmail.com","Bangalore");
+	console.log(obj5);
+	console.log("<br/>");
+	var obj6=new employee("hampendra",27,"hsswamy@gmail.com","Raichur");
+	console.log(obj6);
+	console.log("<br/>");
+	var obj7=new employee("supriya",25,"supriyabasnale@gmail.com","Raichur");
+	console.log(obj7);
+	console.log("<br/>");
+	var obj8=new employee("Archana",25,"archana@gmail.com","Bangalore");
+    console.log(obj8);
+	console.log("<br/>");
+	
+	var obj=Object.create(obj4);
+	console.log(obj);
+	console.log(Object.keys(obj4));
+	console.log(Object.values(obj5));
+	console.log(obj7.hasOwnProperty("age"));
+	console.log(Object.assign(obj,obj2));
+	console.log(obj4 instanceof employee);
+	console.log(obj instanceof employee);
+	var obj4=(Object.defineProperty(obj4,"grade",{value:"A", writable:true}))
+	obj4.grade="B"
+	console.log(obj4);
+
+</script>

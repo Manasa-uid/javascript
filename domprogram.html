@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>domprogram</title>
+	<script type="text/javascript">
+		function myfunc(){
+			var pname=document.getElementById("name").value;
+			var page=document.getElementById("age").value;
+			var pcontact=document.getElementById("contact").value;
+
+			var tabledata=document.getElementById("tab1");
+
+			var newrow=tab1.insertRow(1);
+
+			var cel1=newrow.insertCell(0);
+			var cel2=newrow.insertCell(1);
+			var cel3=newrow.insertCell(2);
+
+			cel1.innerHTML=pname;
+			cel2.innerHTML=page;
+			cel3.innerHTML=pcontact;
+		}
+	</script>
+	<style type="text/css">
+		table,input{
+			border: 2px solid green;
+			border-collapse: collapse;
+			margin: 10px
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<input id="name" type="text" onfocus="this.value=''" placeholder="ENTER NAME">
+		<input id="age" type="number" onfocus="this.value=''" placeholder="ENTER AGE">
+		<input id="contact" type="number" onfocus="this.value=''" placeholder="ENTER CONTACT">
+		<button onclick="myfunc()"> click me</button>
+		<table border ="1" id="tab1">
+			<th> name</th>
+			<th> age</th>
+			<th> contact</th>
+		</table>
+	</div>
+</body>
+</html>
